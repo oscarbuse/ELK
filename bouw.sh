@@ -1,2 +1,6 @@
 #!/usr/bin/bash
-scp search_stories.py www.kwalinux.nl:
+if [ "$1" -eq "test" ]; then
+  scp search_stories.py www.kwalinux.nl:/var/tmp
+else
+  scp search_stories.py www.kwalinux.nl:
+fi
