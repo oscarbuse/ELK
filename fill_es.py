@@ -18,7 +18,7 @@ for (sid, linkname, title, story, begindatum, einddatum, cont) in cursor:
   print "Doing story with id: {}".format(sid)
   # decode/encode story (needed for windows specials..)
   story = story.decode('windows-1252')
-  story = story.encode('utf-8')
+  story = story.encode('utf-8').strip()
   # replace newlines (..)
   story = story.replace('\n',' ').replace('\r','')
   # insert into ES
