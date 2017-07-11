@@ -29,7 +29,7 @@ for (sid, linkname, title, story, begindatum, einddatum, cont) in cursor:
   es.index(index='reizen', doc_type='avonturen', id=sid, body={
     'avonturiers': linkname,
     'titel': title,
-    'avontuur': json.dumps(story),
+    'avontuur': story,
     'begindatum': begindatum,
     'einddatum': einddatum,
     'continent': cont
